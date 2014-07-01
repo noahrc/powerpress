@@ -52,9 +52,10 @@ function powerpressplayer_init($GeneralSettings)
 
 	// include what's needed for each plaer
 	if( defined('POWERPRESS_JS_DEBUG') )
-		wp_enqueue_script( 'powerpress-player', powerpress_get_root_url() .'player.js');
+		wp_enqueue_script( 'powerpress-player', powerpress_get_root_url() .'player.js', array('jquery'));
 	else
-		wp_enqueue_script( 'powerpress-player', powerpress_get_root_url() .'player.min.js');
+		wp_enqueue_script( 'powerpress-player', powerpress_get_root_url() .'player.min.js', array('jquery'));
+
 
 	
 	$enqueue_mejs = false;
